@@ -1,0 +1,12 @@
+{% extends 'main/wrapper.html' %}
+
+{% block content %}
+<body>
+    <img src="{{ poster.photo.url }}">
+    <h1>{{ poster.title }}</h1>
+    <h2> {{ poster.date_provide }}</h2>
+    <p>{{ poster.text_short }}</p>
+    <p>{{ poster.text }}</p>
+
+</body>
+{% endblock %}

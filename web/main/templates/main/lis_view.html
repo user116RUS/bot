@@ -1,0 +1,20 @@
+{% extends 'main/wrapper.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container-xxl">
+    {% for l in lic %}
+    <div align="center">
+        <img style="width:800px;height:1100px;" src="{{ l.licens.url }}" alt="...">
+        <p></p>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}

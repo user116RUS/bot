@@ -1,0 +1,18 @@
+{% extends 'main/lists_wrapper.html' %}
+
+{% block elem %}
+{% for award in awards %}
+<div class="u-blog-post u-container-style u-grey-5 u-radius-26 u-repeater-item u-shape-round u-video-cover">
+    <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2">
+        <a class="u-post-header-link" href="{% url 'award' award.pk %}"><!--blog_post_image-->
+            <img alt="" class="u-blog-control u-expanded-width u-hover-feature u-image u-image-round u-radius-26 u-image-2" src="{{ award.photo.url }}">
+        </a><!--blog_post_header-->
+        <h4 class="u-blog-control u-text u-text-3">
+            <a class="u-post-header-link" href="{% url 'award' award.pk %}">{{ award.date }}</a>
+        </h4><!--/blog_post_header--><!--blog_post_content-->
+        <div class="u-blog-control u-post-content u-text u-text-4"><!--blog_post_content_content-->{{ award.owner }}<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_readmore-->
+        <a href="{% url 'award' award.pk %}" class="u-blog-control u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-26 u-text-hover-black u-btn-2"><!--blog_post_readmore_content--><!--options_json--><!--{"content":"Read More","defaultValue":"Читать дальше"}--><!--/options_json-->Читать дальше<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
+    </div>
+</div><!--/blog_post--><!--blog_post-->
+{% endfor %}
+{% endblock %}

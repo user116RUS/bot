@@ -1,0 +1,147 @@
+{% extends 'main/wrapper.html' %}
+
+{% load static %}
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static 'main/css/universal.css' %}" media="screen">
+
+{% endblock %}
+
+{% block content %}    <section class="u-align-center u-clearfix u-section-1" id="sec-b94a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-round u-radius-26 u-image-1" src="{% static 'main/images/40_re.png' %}" alt="" data-image-width="300" data-image-height="500">
+        <img id="myImg" class="u-image u-image-round u-radius-16 u-image-2 img-thumbnail" src="{{ content.photo.url }}" alt="" data-image-width="1067" data-image-height="1600">
+        <div id="myModal" class="modal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption">{{ content.name }} {{ content.title }}</div>
+        </div>
+        <div class="u-align-left u-clearfix u-group-elements u-group-elements-1">
+          <h1 class="u-custom-font u-font-lobster u-text u-text-custom-color-7 u-text-1">{{ content.name }}{{ content.title }}</h1>
+          <div class="u-border-3 u-border-custom-color-7 u-line u-line-horizontal u-line-1"></div>
+          <h1 class="u-custom-font u-heading-font u-text u-text-2">
+            {% if content.date_provide %}
+              <p><b>Дата проведения: {{ content.date_provide}}</b></p>
+            Дата публикации: {{ content.date }}
+            {% endif %} {{ content.author }} {{ content.owner }}</h1>
+          <p>
+            {{ content.describe }} {{ content.text_short }}
+
+          <p>{{ content.text}}</p>
+        </div>
+        <p class="u-custom-font u-heading-font u-text u-text-default u-text-3">{% if content.date %} {{ content.date }} {% endif %}</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-cc3c">
+      <div class="u-clearfix u-sheet u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
+        <div class="u-blog u-container-style u-expanded-width u-layout-horizontal u-blog-1">
+          <div class="u-list-control"></div>
+          <div class="u-repeater u-repeater-1"><!--blog_post-->
+            <div class="u-blog-post u-container-style u-grey-5 u-radius-26 u-repeater-item u-shape-round u-repeater-item-1">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1"><!--blog_post_header-->
+                <h4 class="u-blog-control u-text u-text-1">
+                  <a class="u-post-header-link" href="blog/пост-5.html"><!--blog_post_header_content-->Заголовок 6-го поста<!--/blog_post_header_content--></a>
+                </h4><!--/blog_post_header-->
+                <a class="u-post-header-link" href="blog/пост-5.html"><!--blog_post_image-->
+                  <img src="images/3.jpeg" alt="" class="u-blog-control u-expanded-width u-image u-image-round u-radius-26 u-image-1"><!--/blog_post_image-->
+                </a><!--blog_post_content-->
+                <div class="u-blog-control u-post-content u-text u-text-2"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content-->
+                <a href="https://nicepage.app" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-3-base u-btn u-button-style u-hover-none u-none u-text-active-palette-4-base u-text-black u-text-hover-palette-2-base u-btn-1">подробнее<br>
+                </a>
+              </div>
+            </div><!--/blog_post--><!--blog_post-->
+            <div class="u-blog-post u-container-style u-grey-5 u-radius-26 u-repeater-item u-shape-round u-repeater-item-2">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2"><!--blog_post_header-->
+                <h4 class="u-blog-control u-text u-text-3">
+                  <a class="u-post-header-link" href="blog/пост-4.html"><!--blog_post_header_content-->Заголовок 5-го поста<!--/blog_post_header_content--></a>
+                </h4><!--/blog_post_header-->
+                <a class="u-post-header-link" href="blog/пост-4.html"><!--blog_post_image-->
+                  <img src="images/2.jpeg" alt="" class="u-blog-control u-expanded-width u-image u-image-round u-radius-26 u-image-2"><!--/blog_post_image-->
+                </a><!--blog_post_content-->
+                <div class="u-blog-control u-post-content u-text u-text-4"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content-->
+                <a href="https://nicepage.app" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-3-base u-btn u-button-style u-hover-none u-none u-text-active-palette-4-base u-text-black u-text-hover-palette-2-base u-btn-2">подробнее<br>
+                </a>
+              </div>
+            </div><!--/blog_post--><!--blog_post-->
+            <div class="u-blog-post u-container-style u-grey-5 u-radius-26 u-repeater-item u-shape-round u-repeater-item-3">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3"><!--blog_post_header-->
+                <h4 class="u-blog-control u-text u-text-5">
+                  <a class="u-post-header-link" href="blog/пост-3.html"><!--blog_post_header_content-->Заголовок 4-го поста<!--/blog_post_header_content--></a>
+                </h4><!--/blog_post_header-->
+                <a class="u-post-header-link" href="blog/пост-3.html"><!--blog_post_image-->
+                  <img src="images/1.jpeg" alt="" class="u-blog-control u-expanded-width u-image u-image-round u-radius-26 u-image-3"><!--/blog_post_image-->
+                </a><!--blog_post_content-->
+                <div class="u-blog-control u-post-content u-text u-text-6"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content-->
+                <a href="https://nicepage.app" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-3-base u-btn u-button-style u-hover-none u-none u-text-active-palette-4-base u-text-black u-text-hover-palette-2-base u-btn-3">подробнее</a>
+              </div>
+            </div><!--/blog_post--><!--blog_post-->
+            <div class="u-blog-post u-container-style u-grey-5 u-radius-26 u-repeater-item u-shape-round u-repeater-item-4">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4"><!--blog_post_header-->
+                <h4 class="u-blog-control u-text u-text-7">
+                  <a class="u-post-header-link" href="blog/пост-2.html"><!--blog_post_header_content-->Заголовок 3-го поста<!--/blog_post_header_content--></a>
+                </h4><!--/blog_post_header-->
+                <a class="u-post-header-link" href="blog/пост-2.html"><!--blog_post_image-->
+                  <img src="images/3.jpeg" alt="" class="u-blog-control u-expanded-width u-image u-image-round u-radius-26 u-image-4"><!--/blog_post_image-->
+                </a><!--blog_post_content-->
+                <div class="u-blog-control u-post-content u-text u-text-8"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content-->
+                <a href="https://nicepage.app" class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-border-palette-3-base u-btn u-button-style u-hover-none u-none u-text-active-palette-4-base u-text-black u-text-hover-palette-2-base u-btn-4">more</a>
+              </div>
+            </div><!--/blog_post-->
+          </div>
+          <div class="u-list-control"></div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div><!--/blog-->
+      </div>
+    </section>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+{% endblock %}
